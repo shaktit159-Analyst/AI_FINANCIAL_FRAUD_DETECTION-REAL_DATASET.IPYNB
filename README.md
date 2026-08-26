@@ -1,4 +1,8 @@
 🔐 AI Financial Fraud Detection
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Pandas](https://img.shields.io/badge/Data%20Analysis-Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Completed-2EA44F?style=for-the-badge)
 
 🚨 AI-Powered Financial Fraud Detection Using Machine Learning
 
