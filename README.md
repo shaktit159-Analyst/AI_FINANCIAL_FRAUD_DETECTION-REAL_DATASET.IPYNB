@@ -1,92 +1,84 @@
-
 🔐 AI Financial Fraud Detection using Machine Learning
 
 <p align="center">🚨 Detecting Potentially Fraudulent Financial Transactions with AI & Predictive Analytics
 
-"Python" (https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python)
-"Machine Learning" (https://img.shields.io/badge/Machine%20Learning-Scikit--learn-orange?style=for-the-badge&logo=scikit-learn)
-"Pandas" (https://img.shields.io/badge/Data%20Analysis-Pandas-green?style=for-the-badge&logo=pandas)
-"Status" (https://img.shields.io/badge/Project-Completed-success?style=for-the-badge)
-
-</p>---
+<img src="https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python" />
+<img src="https://img.shields.io/badge/Machine%20Learning-Scikit--learn-orange?style=for-the-badge&logo=scikit-learn" />
+<img src="https://img.shields.io/badge/Data%20Analysis-Pandas-green?style=for-the-badge&logo=pandas" />
+<img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge" /></p>---
 
 📌 Project Overview
 
 AI Financial Fraud Detection is an end-to-end Machine Learning project developed to identify potentially fraudulent financial transactions.
 
-The system analyzes a 200,000-record financial transaction dataset with 24 features and follows a complete Machine Learning workflow — from data understanding and exploratory analysis to preprocessing, feature engineering, model training, evaluation, fraud prediction, and model saving.
+The project analyzes a 200,000-record financial transaction dataset containing 24 features and follows a complete Machine Learning workflow including data understanding, data cleaning, exploratory data analysis, preprocessing, feature engineering, model training, model evaluation, fraud prediction, threshold analysis, and model saving.
 
-The project demonstrates how Artificial Intelligence, Machine Learning, and Predictive Analytics can be applied to financial risk and fraud detection.
+The primary objective is to demonstrate how Artificial Intelligence, Machine Learning, and Predictive Analytics can be applied to a financial fraud detection problem.
 
 ---
 
 🎯 Business Problem
 
-Financial fraud is a major challenge for banks and financial institutions.
+Financial fraud is a major challenge for banks and financial institutions. A transaction monitoring system needs to identify suspicious transactions while minimizing incorrect classifications.
 
-The objective of this project is to build a predictive system that can learn transaction patterns and classify transactions as:
+Project Objectives
 
-- ✅ Legitimate
-- 🚨 Fraudulent
-
-Key Objectives
-
-- Understand financial transaction data
-- Perform Exploratory Data Analysis (EDA)
-- Identify potential fraud patterns
-- Clean and preprocess the dataset
-- Analyze class imbalance
-- Prepare features for Machine Learning
-- Train multiple classification models
-- Compare model performance
-- Evaluate models using multiple metrics
-- Select a suitable fraud detection model
-- Predict an unseen transaction
-- Save the trained model for future use
+- 🔍 Understand financial transaction data
+- 🧹 Clean and preprocess the dataset
+- 📊 Perform Exploratory Data Analysis
+- 🚨 Analyze fraudulent transaction patterns
+- ⚖️ Handle and understand class imbalance
+- 🤖 Train multiple Machine Learning classification models
+- 📈 Compare model performance
+- 🎯 Analyze classification thresholds
+- 🧪 Test predictions on unseen transaction data
+- 💾 Save the trained Machine Learning model
 
 ---
 
 🔄 Project Workflow
 
-Financial Transaction Data
-          ↓
-Data Understanding
-          ↓
-Data Cleaning
-          ↓
-Exploratory Data Analysis
-          ↓
-Class Imbalance Analysis
-          ↓
-Train-Test Split
-          ↓
-Feature Preprocessing
-          ↓
-Feature Engineering
-          ↓
-Model Training
-          ↓
-Model Comparison
-          ↓
-Model Evaluation
-          ↓
-Best Model Selection
-          ↓
-Fraud Prediction
-          ↓
-Model Saving
+Financial Transaction Dataset
+            ↓
+      Data Understanding
+            ↓
+        Data Cleaning
+            ↓
+ Exploratory Data Analysis
+            ↓
+ Class Imbalance Analysis
+            ↓
+     Feature Engineering
+            ↓
+   Data Preprocessing
+            ↓
+      Train-Test Split
+            ↓
+      Model Training
+            ↓
+     Model Comparison
+            ↓
+    Model Evaluation
+            ↓
+ Threshold Analysis
+            ↓
+   Best Model Selection
+            ↓
+ Unseen Transaction Prediction
+            ↓
+       Model Saving
 
 ---
 
 📊 Dataset
 
-The project uses a transaction-level financial dataset containing:
+The project uses a financial transaction dataset containing:
 
 - 200,000 records
 - 24 features
-- Customer information
+- Customer-related information
+- Account-related information
 - Transaction information
-- Account information
 - Merchant information
 - Device information
 - Location information
@@ -100,13 +92,13 @@ Value| Meaning
 "0"| Legitimate Transaction
 "1"| Fraudulent Transaction
 
-The dataset represents an imbalanced classification problem, making metrics such as Precision, Recall, F1-Score and ROC-AUC especially important.
+The dataset represents an imbalanced binary classification problem, which makes fraud-sensitive metrics such as Precision, Recall, F1-Score, ROC-AUC and PR-AUC important for evaluating model performance.
 
 ---
 
 🔎 Dataset Features
 
-The dataset contains customer, account, transaction, merchant, device and location-related information, including:
+The dataset contains customer, account, transaction, merchant, device and location-related attributes, including:
 
 - Customer ID
 - Customer Name
@@ -133,9 +125,9 @@ The dataset contains customer, account, transaction, merchant, device and locati
 
 🧹 Data Preprocessing
 
-The project performs multiple preprocessing operations before Machine Learning.
+The project applies multiple preprocessing techniques before training the Machine Learning models.
 
-Main preprocessing steps
+Main Steps
 
 - Data inspection
 - Data type analysis
@@ -146,60 +138,65 @@ Main preprocessing steps
 - Categorical feature encoding
 - Feature scaling
 - Train-test splitting
+- Feature transformation using Scikit-learn pipelines
 
-The notebook uses "StandardScaler", "OneHotEncoder", "ColumnTransformer", and "Pipeline" from Scikit-learn for preprocessing.
+The project uses tools such as:
+
+- "StandardScaler"
+- "OneHotEncoder"
+- "ColumnTransformer"
+- "Pipeline"
 
 ---
 
 📈 Exploratory Data Analysis
 
-EDA is performed to understand the structure and behavior of financial transactions.
+Exploratory Data Analysis is performed to understand transaction behavior and identify patterns related to fraud.
 
-Analysis includes:
+Analysis Includes
 
 - Fraud vs. legitimate transaction distribution
-- Transaction patterns
 - Customer demographics
+- Transaction behavior
 - Merchant categories
 - Account types
 - Transaction locations
 - Device types
 - Numerical feature relationships
 - Correlation analysis
+- Class imbalance visualization
 
-Visualizations are used to identify patterns and relationships that may contribute to fraud detection.
+Data visualization is used to make transaction patterns and relationships easier to interpret.
 
 ---
 
 🤖 Machine Learning Models
 
-Multiple classification algorithms are trained and compared.
+Three classification algorithms are trained and evaluated.
 
-Models Used
+1️⃣ Logistic Regression
 
-1. Logistic Regression
+Used as a baseline classification model to establish an initial performance benchmark.
 
-A baseline classification model used to establish a performance benchmark.
+2️⃣ Decision Tree Classifier
 
-2. Decision Tree Classifier
+A tree-based classification algorithm capable of learning non-linear relationships between transaction features.
 
-A tree-based model capable of learning non-linear relationships between transaction features.
+3️⃣ Random Forest Classifier
 
-3. Random Forest Classifier
-
-An ensemble learning algorithm that combines multiple decision trees to improve predictive performance and robustness.
+An ensemble learning algorithm that combines multiple decision trees and is used as the primary model for comparison and fraud prediction.
 
 ---
 
 📊 Model Evaluation
 
-Since fraud detection is an imbalanced classification problem, relying only on Accuracy can be misleading.
+Fraud detection is an imbalanced classification problem, so Accuracy alone cannot provide a complete picture of model performance.
 
 The project evaluates models using:
 
 Accuracy
 
-Measures the overall proportion of correctly classified transactions.
+Measures the overall percentage of correctly classified transactions.
 
 Precision
 
@@ -215,52 +212,86 @@ Provides a balance between Precision and Recall.
 
 ROC-AUC
 
-Measures the model's ability to distinguish between fraudulent and legitimate transactions across classification thresholds.
+Measures the ability of the model to distinguish between fraudulent and legitimate transactions across different classification thresholds.
+
+PR-AUC
+
+Provides an additional evaluation perspective for imbalanced classification problems by focusing on the Precision-Recall relationship.
 
 Confusion Matrix
 
-The confusion matrix provides:
+Analyzes:
 
 - True Positives
 - True Negatives
 - False Positives
 - False Negatives
 
-Why Recall Matters
+---
 
-In financial fraud detection, a False Negative can be particularly costly because an actual fraudulent transaction may be classified as legitimate.
+⚠️ Important Model Performance Insight
 
-Therefore, the project considers Precision, Recall, F1-Score and ROC-AUC along with Accuracy when comparing models.
+The final Random Forest model achieved approximately:
+
+Metric| Result
+Accuracy| 94.79%
+Precision| 5.33%
+Recall| 0.20%
+F1-Score| 0.38%
+
+What does this mean?
+
+Although the overall Accuracy is high, the very low Recall indicates that the model is not yet effective enough at identifying actual fraudulent transactions.
+
+This is an important finding because fraud detection is highly sensitive to False Negatives.
+
+A model can achieve high Accuracy on an imbalanced dataset while still missing a large proportion of fraudulent transactions.
+
+Therefore, this project does not treat Accuracy as the only success criterion and highlights the need for further fraud-focused optimization.
+
+---
+
+🎯 Threshold Analysis
+
+The project also explores classification threshold optimization.
+
+Instead of relying only on the default classification threshold, different thresholds can be analyzed to understand the trade-off between:
+
+Precision  ↔  Recall
+
+This is particularly important in financial fraud detection, where organizations may prefer higher Recall to detect more suspicious transactions, depending on the acceptable False Positive rate.
 
 ---
 
 🧪 Unseen Transaction Prediction
 
-After model evaluation, the project demonstrates how the selected model can be used to predict an unseen transaction.
+The trained model is also used to demonstrate prediction on an unseen transaction.
 
-The prediction pipeline follows:
+Prediction Workflow
 
 New Transaction
-      ↓
-Preprocessing
-      ↓
+       ↓
+Data Preprocessing
+       ↓
 Feature Transformation
-      ↓
-Trained Model
-      ↓
+       ↓
+Trained ML Model
+       ↓
 Prediction
-      ↓
-Fraud / Legitimate
+       ↓
+Legitimate / Fraudulent
 
-This demonstrates the practical application of the trained Machine Learning model beyond the original training dataset.
+This demonstrates how a trained model can be applied to new transaction data after the required preprocessing steps.
 
 ---
 
 💾 Model Saving
 
-The trained Machine Learning model is saved using Joblib.
+The project includes model persistence using Joblib.
 
-This allows the trained model to be reused later without retraining it from scratch and provides a foundation for future deployment.
+Saving the trained model allows it to be reused later without retraining the complete Machine Learning pipeline from the beginning.
+
+This also provides a foundation for future deployment.
 
 ---
 
@@ -268,7 +299,7 @@ This allows the trained model to be reused later without retraining it from scra
 
 Programming Language
 
-- 🐍 Python
+🐍 Python
 
 Libraries
 
@@ -276,8 +307,8 @@ Libraries
 - NumPy — Numerical computing
 - Matplotlib — Data visualization
 - Seaborn — Statistical visualization
-- Scikit-learn — Data preprocessing, Machine Learning and evaluation
-- Joblib — Model saving and loading
+- Scikit-learn — Machine Learning and model evaluation
+- Joblib — Model persistence
 
 Concepts
 
@@ -291,6 +322,7 @@ Concepts
 - Model Evaluation
 - Fraud Detection
 - Data Visualization
+- Threshold Optimization
 
 ---
 
@@ -304,108 +336,124 @@ AI_FINANCIAL_FRAUD_DETECTION-REAL_DATASET.IPYNB
 │
 └── 📄 README.md
 
-«Dataset Note: The original dataset is larger than GitHub's individual file-size limit, so the dataset was prepared into smaller parts for repository storage.»
+Dataset Note
+
+The original dataset is larger than GitHub's individual file-size limit. Therefore, the dataset was prepared into smaller parts for repository storage.
+
+The notebook expects the dataset under the filename:
+
+Bank_Transaction_Fraud_Detection.csv
+
+If the dataset is stored as multiple parts, the parts need to be reconstructed into the expected CSV before running the notebook.
 
 ---
 
-🚀 How to Run
+🚀 How to Run the Project
 
-1. Clone the Repository
+1️⃣ Clone the Repository
 
 git clone https://github.com/shaktit159-Analyst/AI_FINANCIAL_FRAUD_DETECTION-REAL_DATASET.IPYNB.git
 
-2. Open the Notebook
+2️⃣ Open the Notebook
 
 Open:
 
 AI_Financial_Fraud_Detection(Real_Dataset).ipynb
 
-The notebook can be opened using:
+You can run it using:
 
 - Google Colab
 - Jupyter Notebook
 - JupyterLab
 
-3. Install Required Libraries
+3️⃣ Install Required Libraries
 
 pip install pandas numpy matplotlib seaborn scikit-learn joblib
 
-4. Add the Required Dataset
+4️⃣ Prepare the Dataset
 
-Place the required dataset file in the notebook's working directory.
+Place the complete dataset in the notebook's working directory using the expected filename:
 
-«Important: The notebook currently loads the file using the filename "Bank_Transaction_Fraud_Detection.csv". If the dataset is stored as multiple GitHub parts, the parts must first be reconstructed into the expected CSV file before running the notebook.»
+Bank_Transaction_Fraud_Detection.csv
 
-5. Run the Notebook
+5️⃣ Run the Notebook
 
 Execute the notebook cells sequentially from data loading through model evaluation and prediction.
 
 ---
 
-💡 Business Value
+💼 Business Value
 
 This project demonstrates how Machine Learning can support financial organizations in:
 
-🚨 Early Fraud Detection
+🚨 Fraud Monitoring
 
-Identify potentially suspicious transactions.
+Identify potentially suspicious transactions using historical transaction patterns.
 
-📊 Risk-Based Monitoring
+📊 Risk Analysis
 
-Prioritize transactions that require further investigation.
+Analyze transaction characteristics associated with fraudulent activity.
 
 🛡️ Customer Protection
 
-Support stronger monitoring of potentially fraudulent activity.
+Support stronger transaction monitoring and fraud prevention strategies.
 
-⚙️ Operational Efficiency
+⚙️ Automated Analysis
 
-Assist automated transaction monitoring and reduce dependence on purely manual review.
+Reduce dependency on purely manual transaction analysis.
 
 📈 Data-Driven Decision Making
 
-Use transaction data and predictive models to support fraud prevention strategies.
+Use analytical and predictive techniques to support financial risk management.
 
 ---
 
-🌟 Why This Project Matters
+⚠️ Current Limitations
 
-Financial fraud detection is not simply a Machine Learning problem — it is a business risk management problem.
+The current model demonstrates the complete Machine Learning workflow but still has limitations for production-level fraud detection.
 
-An effective fraud detection system needs to balance:
+The most important limitation is the low fraud Recall observed in the final evaluation.
 
-Fraud Detection
-       +
-High Recall
-       +
-Precision
-       +
-False Positive Reduction
-       +
-Operational Efficiency
-       =
-Stronger Financial Security
-
-This project demonstrates the practical application of Data Analytics, Machine Learning and Predictive Analytics to a financial fraud detection problem.
+Additional improvements are therefore required before considering the model suitable for real-time production deployment.
 
 ---
 
 🔮 Future Improvements
 
-The current project provides a strong foundation that can be extended into a production-oriented fraud detection solution.
-
-Potential improvements include:
+The project can be further improved through:
 
 - ⚡ Real-time transaction monitoring
 - 🚨 Real-time fraud alerts
 - 📈 Fraud risk scoring
+- ⚖️ Advanced class-imbalance handling
 - 🧠 Advanced ensemble and boosting models
 - 🔍 Explainable AI (XAI)
+- 🎯 Cost-sensitive learning
 - 🌐 REST API deployment using Flask or FastAPI
 - ☁️ Cloud deployment
 - 📊 Interactive fraud analytics dashboard
 - 🔄 Automated model retraining
+- 📡 Real-time data pipelines
 - 🔐 Privacy-preserving financial analytics
+
+---
+
+🌟 Key Learning Outcomes
+
+Through this project, the following practical skills were demonstrated:
+
+- Real-world data analysis
+- Exploratory Data Analysis
+- Data preprocessing
+- Feature engineering
+- Handling categorical variables
+- Machine Learning classification
+- Imbalanced classification evaluation
+- Model comparison
+- Threshold analysis
+- Performance interpretation
+- Model persistence
+- Business-oriented analytical thinking
 
 ---
 
@@ -429,7 +477,7 @@ Areas of Interest
 
 If you find this project useful or interesting, consider giving the repository a ⭐ on GitHub.
 
-Your feedback and suggestions are always welcome.
+Feedback and suggestions are always welcome.
 
 ---
 
@@ -441,6 +489,8 @@ https://github.com/shaktit159-Analyst/AI_FINANCIAL_FRAUD_DETECTION-REAL_DATASET.
 
 ---
 
-🚀 Built with Python • Machine Learning • Predictive Analytics • Data Visualization
+<p align="center">🚀 Built with Python • Machine Learning • Predictive Analytics • Data Visualization
 
 Turning financial transaction data into actionable fraud detection insights.
+
+</p>
